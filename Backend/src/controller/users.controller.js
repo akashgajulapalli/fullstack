@@ -43,9 +43,9 @@ addUser = async (req, res) => {
     const salt = await bcrypt.genSalt(PWD_ENCRYPTION_ROUNDS);
     user.password = await bcrypt.hash(user.password, salt);
     // saving the data in database
-    const response = await user.save();
+    await user.save();
     // Sending success response with required data.
-    handleResponse(statusCode.SUCCESS, res, { message: messages.USER_ADDED_TEXT, userDetails:response });
+    handleResponse(statusCode.SUCCESS, res, { message: messages.USER_ADDED_TEXT});
 }
 
 /**
