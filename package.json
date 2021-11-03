@@ -1,7 +1,7 @@
 {
-  "name": "backend",
+  "name": "fullstack_app",
   "version": "1.0.0",
-  "description": "practice project",
+  "description": "fullstack project",
   "main": "index.js",
   "scripts": {
     "startclient": "set PORT=3000 && npm start --prefix client",
