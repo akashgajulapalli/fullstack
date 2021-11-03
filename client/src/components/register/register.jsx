@@ -56,7 +56,7 @@ class Register extends Component {
           <h1>Register</h1>
           <p>Please fill in this form to create an account.</p>
           <hr />
-          <label for="newName">
+          <label htmlFor="newName">
             <b>Name</b>
           </label>
           <input
@@ -69,7 +69,7 @@ class Register extends Component {
             required
           />
 
-          <label for="newEmail">
+          <label htmlFor="newEmail">
             <b>Email</b>
           </label>
           <input
@@ -82,7 +82,7 @@ class Register extends Component {
             required
           />
 
-          <label for="pwd">
+          <label htmlFor="pwd">
             <b>Password</b>
           </label>
           <input

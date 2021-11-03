@@ -4,12 +4,12 @@ const cors                      = require('cors');
 const bodyParser                = require('body-parser');
 
 // importing internal modules
-const routePaths                = require('./src/startup/routes');
-const config                    = require('./src/startup/config');
-const dbConnect                 = require('./src/startup/db');
+const routePaths                = require('./server/startup/routes');
+const config                    = require('./server/startup/config');
+const dbConnect                 = require('./server/startup/db');
 
 // Importing constants
-const { serverConfig, routes }  = require('./src/utilities/constants');
+const { serverConfig, routes }  = require('./server/utilities/constants');
 const app                       = express();
 app.use(express.json());
 

@@ -1,5 +1,5 @@
 // npm dependency
-const bcryptjs                                = require('bcryptjs');
+const bcryptjs                              = require('bcryptjs');
 
 // Internal dependencies[MODEL,SCHEMA and helper functions]
 const messages                              = require('../utilities/static_messages');

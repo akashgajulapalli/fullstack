@@ -10,6 +10,9 @@ module.exports = {
         }
     },
 
+    jwtPrivateKey           : "jwtPrivateKey",
+    db                      : "mongodb://localhost/users",
+
     jwtConstants: {
         TOKEN_TIMEOUT       : 3600 // [expires for every one hour]
     },

@@ -1,12 +1,10 @@
 // npm dependencies
-const jwt                       = require('jsonwebtoken');
-const config                    = require('config');
+const jwt                               = require('jsonwebtoken');
 
 // Iternal dependencies
-// const { roles }                 = require('../utilities/roles');
-const messages                  = require('../utilities/static_messages');
-const { handleResponse }        = require('../utilities/utils');
-const { statusCode }            = require('../utilities/constants');
+const messages                          = require('../utilities/static_messages');
+const { handleResponse }                = require('../utilities/utils');
+const { statusCode, jwtPrivateKey }     = require('../utilities/constants');
 
 /**
  * @param {object}  request     Request body from data sent by end user. 
@@ -20,7 +18,7 @@ authentication = (request, response, next) => {
     if (!token) return handleResponse(statusCode.FORBIDDEN, response, { message: messages.TOKEN_REQUIRED_TEXT });
     try {
         // Decoding the data in token.
-        const decoded = jwt.verify(token, config.get('jwtPrivateKey'));
+        const decoded = jwt.verify(token, jwtPrivateKey);
         // Adding the decoded data to request object.
         request.user = decoded;
         // next middleware.

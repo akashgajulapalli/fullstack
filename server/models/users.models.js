@@ -1,10 +1,11 @@
 // npm dependencies
 const mongoose                          = require('mongoose');
-const config                            = require('config');
 const jwt                               = require('jsonwebtoken');
 
 // Constant import
-const { collectionName, jwtConstants }  = require('../utilities/constants');
+const { collectionName, 
+        jwtConstants, 
+        jwtPrivateKey }                 = require('../utilities/constants');
 
 // Creating database schema for users
 const userSchema = new mongoose.Schema({
@@ -22,7 +23,7 @@ userSchema.methods.generateAuthToken = (user) => {
     // _id and isAdmin details are storing in token along with private key and setting the token expiry time[expiry time is in sec].
     const token = jwt.sign(
         { _id: user._id },
-        config.get('jwtPrivateKey'),
+        jwtPrivateKey,
         { expiresIn: jwtConstants.TOKEN_TIMEOUT }
     );
     return token;

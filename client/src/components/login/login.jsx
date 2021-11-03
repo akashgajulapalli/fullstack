@@ -42,7 +42,7 @@ class Login extends Component {
           <img src="img_avatar2.png" alt="Avatar" className="avatar" />
         </div>
         <div className="container">
-          <label for="mailid">
+          <label htmlFor="mailid">
             <b>E-mail</b>
           </label>
           <input
@@ -54,7 +54,7 @@ class Login extends Component {
             onChange={this.getEvent}
             required
           />
-          <label for="pwd">
+          <label htmlFor="pwd">
             <b>Password</b>
           </label>
           <input
