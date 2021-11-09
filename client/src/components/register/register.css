@@ -7,15 +7,20 @@
     padding: 16px;
     background-color: white;
   }
+
+  label{
+    text-align: left;
+  }
   
   /* Full-width input fields */
   input[type=text], input[type=password] {
-    width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
     background: #f1f1f1;
+    width: 35%;
+
   }
   
   input[type=text]:focus, input[type=password]:focus {
@@ -37,7 +42,6 @@
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
     opacity: 0.9;
   }
   

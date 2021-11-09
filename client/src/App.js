@@ -1,13 +1,8 @@
-import './App.css';
-import Login from './components/login/login';
-import Register from './components/register/register';
+import "./App.css";
+import RouteComponent from "./routes";
 
 function App() {
-  return (
-    <div>
-      <Register />
-    </div>
-  );
+  return <RouteComponent />;
 }
 
 export default App;
